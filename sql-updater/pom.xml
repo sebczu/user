@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>sql-updater</artifactId>
+
+  <parent>
+    <groupId>com.sebczu.user</groupId>
+    <artifactId>user-project</artifactId>
+    <version>0.0.1</version>
+  </parent>
+
+  <properties>
+    <jib-maven-plugin.version>3.1.4</jib-maven-plugin.version>
+
+    <DATABASE_SCHEMA>user</DATABASE_SCHEMA>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>${jib-maven-plugin.version}</version>
+          <configuration>
+            <from>
+              <image>sebczu/personal:sql-updater-latest</image>
+            </from>
+            <to>
+              <image>sebczu/personal:user-sql-updater-${project.version}</image>
+              <tags>
+                <tag>user-sql-updater-latest</tag>
+              </tags>
+            </to>
+            <container>
+              <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+              <entrypoint>INHERIT</entrypoint>
+              <environment>
+                <DATABASE_SCHEMA>${DATABASE_SCHEMA}</DATABASE_SCHEMA>
+              </environment>
+            </container>
+            <extraDirectories>
+              <paths>
+                <path>
+                  <from>${project.basedir}/src</from>
+                  <into>/scripts/src</into>
+                </path>
+              </paths>
+            </extraDirectories>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>local-build</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.google.cloud.tools</groupId>
+            <artifactId>jib-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>local-build</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>dockerBuild</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>registry-build</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.google.cloud.tools</groupId>
+            <artifactId>jib-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>registry-build</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>

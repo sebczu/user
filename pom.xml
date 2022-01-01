@@ -15,7 +15,7 @@
 
   <modules>
     <module>service</module>
-<!--    <module>sql-updater</module>-->
+    <module>sql-updater</module>
   </modules>
 
 <!--  <profiles>-->
