@@ -1,0 +1,4 @@
+integration.test:
+    service:
+      hostname: localhost
+      port: 8080

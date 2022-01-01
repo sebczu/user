@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>it-bom</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.sebczu.user</groupId>
+    <artifactId>integration-test</artifactId>
+    <version>0.0.1</version>
+  </parent>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- CONFIGURATION -->
+      <dependency>
+        <groupId>com.sebczu.user</groupId>
+        <artifactId>it-main</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sebczu.user</groupId>
+        <artifactId>it-configuration</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <!-- TEST -->
+      <dependency>
+        <groupId>com.sebczu.user</groupId>
+        <artifactId>it-actuator</artifactId>
+        <version>${project.version}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

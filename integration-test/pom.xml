@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>integration-test</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.sebczu.user</groupId>
+    <artifactId>user-project</artifactId>
+    <version>0.0.1</version>
+  </parent>
+
+  <modules>
+    <module>it-bom</module>
+    <module>it-parent</module>
+    <module>it-main</module>
+    <module>it-configuration</module>
+
+    <module>it-actuator</module>
+    <module>it-runner</module>
+  </modules>
+
+</project>
