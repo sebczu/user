@@ -1,9 +1,9 @@
-package com.sebczu.template.user.controller;
+package com.sebczu.user.user.controller;
 
-import com.sebczu.template.user.api.ExternalUserAPI;
-import com.sebczu.template.user.domain.User;
-import com.sebczu.template.user.service.CreateUserService;
-import com.sebczu.template.user.service.GetUserService;
+import com.sebczu.user.user.api.ExternalUserAPI;
+import com.sebczu.user.user.domain.User;
+import com.sebczu.user.user.service.CreateUserService;
+import com.sebczu.user.user.service.GetUserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;

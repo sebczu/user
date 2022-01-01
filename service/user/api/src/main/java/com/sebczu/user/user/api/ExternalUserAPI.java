@@ -1,6 +1,6 @@
-package com.sebczu.template.user.api;
+package com.sebczu.user.user.api;
 
-import com.sebczu.template.user.domain.User;
+import com.sebczu.user.user.domain.User;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;

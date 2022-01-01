@@ -1,9 +1,9 @@
-package com.sebczu.template.user.service;
+package com.sebczu.user.user.service;
 
-import com.sebczu.template.user.converter.UserConverter;
-import com.sebczu.template.user.domain.User;
-import com.sebczu.template.user.repository.UserRepository;
-import com.sebczu.template.user.repository.entity.UserEntity;
+import com.sebczu.user.user.converter.UserConverter;
+import com.sebczu.user.user.domain.User;
+import com.sebczu.user.user.repository.UserRepository;
+import com.sebczu.user.user.repository.entity.UserEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

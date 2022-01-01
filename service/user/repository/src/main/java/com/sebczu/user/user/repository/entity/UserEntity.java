@@ -1,4 +1,4 @@
-package com.sebczu.template.user.repository.entity;
+package com.sebczu.user.user.repository.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
-package com.sebczu.template.user.converter;
+package com.sebczu.user.user.converter;
 
-import com.sebczu.template.user.domain.User;
-import com.sebczu.template.user.repository.entity.UserEntity;
+import com.sebczu.user.user.domain.User;
+import com.sebczu.user.user.repository.entity.UserEntity;
 import org.springframework.stereotype.Component;
 
 @Component

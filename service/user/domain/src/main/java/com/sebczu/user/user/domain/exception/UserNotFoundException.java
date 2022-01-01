@@ -1,4 +1,4 @@
-package com.sebczu.template.user.domain.exception;
+package com.sebczu.user.user.domain.exception;
 
 import static java.lang.String.format;
 

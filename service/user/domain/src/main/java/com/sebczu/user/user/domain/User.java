@@ -1,4 +1,4 @@
-package com.sebczu.template.user.domain;
+package com.sebczu.user.user.domain;
 
 import javax.validation.constraints.Null;
 import lombok.Getter;
