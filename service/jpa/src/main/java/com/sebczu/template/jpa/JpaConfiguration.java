@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "com.sebczu.template")
-@EntityScan(basePackages = "com.sebczu.template")
+@EnableJpaRepositories(basePackages = "com.sebczu")
+@EntityScan(basePackages = "com.sebczu")
 public class JpaConfiguration {
 
 }

@@ -18,27 +18,27 @@
     <module>sql-updater</module>
   </modules>
 
-<!--  <profiles>-->
-<!--    <profile>-->
-<!--      <id>docker-compose</id>-->
-<!--      <activation>-->
-<!--        <activeByDefault>false</activeByDefault>-->
-<!--      </activation>-->
-<!--      <modules>-->
-<!--        <module>docker</module>-->
-<!--      </modules>-->
-<!--    </profile>-->
+  <profiles>
+    <profile>
+      <id>docker-compose</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <modules>
+        <module>docker</module>
+      </modules>
+    </profile>
 
-<!--    <profile>-->
-<!--      <id>integration-test</id>-->
-<!--      <activation>-->
-<!--        <activeByDefault>false</activeByDefault>-->
-<!--      </activation>-->
-<!--      <modules>-->
-<!--        <module>integration-test</module>-->
-<!--      </modules>-->
-<!--    </profile>-->
-<!--  </profiles>-->
+    <profile>
+      <id>integration-test</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <modules>
+        <module>integration-test</module>
+      </modules>
+    </profile>
+  </profiles>
 
   <distributionManagement>
     <repository>

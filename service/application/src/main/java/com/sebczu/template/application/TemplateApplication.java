@@ -3,7 +3,7 @@ package com.sebczu.template.application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.sebczu.template")
+@SpringBootApplication(scanBasePackages = "com.sebczu")
 public class TemplateApplication {
 
   public static void main(String[] args) {

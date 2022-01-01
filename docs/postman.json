@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "f366e03b-dc56-48fb-a974-e8345ec82756",
+		"name": "[Template] User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/external/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"external",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"example\",\n    \"password\": \"example\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/external/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"external",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
